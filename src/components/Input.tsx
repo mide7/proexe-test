@@ -5,11 +5,7 @@ interface input {
   name: string;
   label?: string;
   type?: "password" | "number" | "text" | "email" | "tel";
-  placeholder?: string;
   formik?: FormikProps<any>;
-  min?: number;
-  max?: number;
-  step?: number;
   required?: boolean;
 }
 

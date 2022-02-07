@@ -1,10 +1,10 @@
 import { FormikHelpers, useFormik } from "formik";
-import validationSchema from "../../formikSchemas/userSchema";
-import Input from "../../components/Input";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
+import Input from "../../components/Input";
+import validationSchema from "../../formikSchemas/userSchema";
 import { addUser } from "../../features/users";
-import { useRef } from "react";
 import { base_url } from "../../utils/constants";
 import {
   notifyError,
@@ -14,7 +14,6 @@ import {
 export default function CreateUser() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const currentPageRef = useRef<any>(null);
 
   const initialValues = {
     name: "",
@@ -82,7 +81,7 @@ export default function CreateUser() {
   });
 
   return (
-    <div ref={currentPageRef}>
+    <div>
       <form onSubmit={formik.handleSubmit}>
         <div className="row">
           <div className="col-md-6">

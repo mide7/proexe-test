@@ -61,7 +61,6 @@ export default function EditUser() {
           name: values.company_name,
         },
       };
-      console.log("body", body);
       dispatch(updateUser(body));
       notifyInfo("User Succesfully Updated");
       navigate("/", { replace: true });
